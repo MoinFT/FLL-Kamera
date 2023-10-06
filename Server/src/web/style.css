@@ -1,0 +1,138 @@
+body {
+    margin: 0;
+    background-color: #333333;
+    background-image: url("http://[DEINE-SERVER-IP-ADRESSE]:3000/img/background.jpg");
+    background-size: 100%;
+}
+
+div.cam {
+    width: 100%;
+    height: 100%;
+}
+
+div.cam > div#action {
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+}
+
+div.cam > div#action > button {
+    background-color: #313131;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    color: #999999;
+    font-size: 15px;
+}
+
+div.cam > img#logoFll {
+    position: absolute;
+    top: 100px;
+    height: 70px;
+    left: 10%;
+    background-color: #cccccc; /* rgb(149, 49, 49) */
+    border: 15px solid #cccccc; /* rgb(149, 49, 49) */
+    border-radius: 15px;
+    /* box-shadow: 0 0 15px 5px #ffffff; */ /* Glow Effekt */
+}
+
+div.cam > img#logoHandsOnTechnology {
+    position: absolute;
+    top: 100px;
+    height: 70px;
+    right: 10%;
+    background-color: #cccccc; /* rgb(49, 49, 149) */
+    border: 15px solid #cccccc; /* rgb(49, 49, 149) */
+    border-radius: 15px;
+    /* box-shadow: 0 0 15px 5px #ffffff; */ /* Glow Effekt */
+}
+
+div.cam > img#logoSeasonTheme {
+    position: absolute;
+    bottom: 75px;
+    width: 450px;
+    left: calc(50% - (450px / 2));
+}
+
+div.cam > div#stopwatch {
+    margin: 0px auto 25px auto;
+    padding-top: 100px;
+}
+
+div.cam > div#stopwatch > p#stopwatch {
+    font-size: 90px;
+    margin: 0 auto;
+    width: 275px;
+    text-align: center;
+
+    font-family: "Roboto", "sans-serif";
+    color: #eeeeee;
+}
+
+div.cam > div.streams {
+    display: inline-flex;
+    width: 100%;
+    height: 650px;
+}
+
+div.cam > div.streams > div.tables {
+    width: 720px;
+    position: absolute;
+}
+
+div.cam > div.streams > div.tables > h1 {
+    text-align: center;
+    font-family: "Roboto", "sans-serif";
+    color: #222222;
+    width: 125px;
+    margin: 20px auto;
+}
+
+div.cam > div.streams > div.tables > h1#left {
+    background-color: #cccccc; /* rgb(149, 49, 49) */
+    border: 5px solid #cccccc; /* rgb(149, 49, 49) */
+    border-radius: 10px;
+}
+
+div.cam > div.streams > div.tables > h1#right {
+    background-color: #cccccc; /* rgb(49, 49, 149) */
+    border: 5px solid #cccccc; /* rgb(49, 49, 149) */
+    border-radius: 10px;
+}
+
+div.cam > div.streams > div.tables > div.stream {
+    width: 480px;
+    height: 720px;
+    overflow: hidden;
+    margin-left: 120px;
+    margin-top: -120px;
+}
+
+div.cam > div.streams > div.tables > div.stream > img {
+    height: 100%;
+}
+
+div.cam > div.streams > div#table1 {
+    left: 7.5%;
+    height: 600px;
+}
+
+div.cam > div.streams > div#table1 > div#stream1 {
+    transform: rotate(90deg);
+}
+
+div.cam > div.streams > div#table2 {
+    right: 7.5%;
+}
+
+div.cam > div.streams > div#table2 > div#stream2 {
+    transform: rotate(270deg);
+}
+
+div.cam > div.streams > div#table2 > div#stream2 > img {
+    margin-left: -480px;
+}
+
+div#cam2 {
+    display: none;
+}

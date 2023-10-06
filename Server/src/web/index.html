@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=yes"
+        />
+
+        <title>Preview Stream</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="./index.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="./style.css" />
+    </head>
+
+    <body>
+        <div id="cam1" class="cam">
+            <img
+                id="logoFll"
+                src="./img/FIRSTLegoLeague.png"
+                alt="FIRSTLegoLeague"
+            />
+            <img
+                id="logoHandsOnTechnology"
+                src="./img/HandsOnTechnology.png"
+                alt="HandsOnTechnology"
+            />
+
+            <div id="stopwatch">
+                <p id="stopwatch">02:30</p>
+            </div>
+
+            <div class="streams">
+                <div id="table1" class="tables">
+                    <h1 id="left">Tisch 1</h1>
+                    <div id="stream1" class="stream">
+                        <img id="playCam1_1" />
+                    </div>
+                </div>
+                <div id="table2" class="tables">
+                    <h1 id="right">Tisch 2</h1>
+                    <div id="stream2" class="stream">
+                        <img id="playCam1_2" />
+                    </div>
+                </div>
+            </div>
+
+            <img
+                id="logoSeasonTheme"
+                src="./img/MASTERPIECE.png"
+                alt="MASTERPIECE"
+            />
+
+            <div id="action">
+                <button onclick="startStopwatch()">Start</button>
+                <button onclick="resetStopwatch()">Reset</button>
+                <button onclick="switchTable('cam1')">Zu Tisch 3 und 4</button>
+            </div>
+        </div>
+        <div id="cam2" class="cam">
+            <img
+                id="logoFll"
+                src="./img/FIRSTLegoLeague.png"
+                alt="FIRSTLegoLeague"
+            />
+
+            <img
+                id="logoHandsOnTechnology"
+                src="./img/HandsOnTechnology.png"
+                alt="HandsOnTechnology"
+            />
+
+            <div id="stopwatch">
+                <p id="stopwatch">02:30</p>
+            </div>
+
+            <div class="streams">
+                <div id="table1" class="tables">
+                    <h1 id="left">Tisch 3</h1>
+                    <div id="stream1" class="stream">
+                        <img id="playCam2_1" />
+                    </div>
+                </div>
+                <div id="table2" class="tables">
+                    <h1 id="right">Tisch 4</h1>
+                    <div id="stream2" class="stream">
+                        <img id="playCam2_2" />
+                    </div>
+                </div>
+            </div>
+
+            <img
+                id="logoSeasonTheme"
+                src="./img/MASTERPIECE.png"
+                alt="MASTERPIECE"
+            />
+
+            <div id="action">
+                <button onclick="startStopwatch()">Start</button>
+                <button onclick="resetStopwatch()">Reset</button>
+                <button onclick="switchTable('cam2')">Zu Tisch 1 und 2</button>
+            </div>
+        </div>
+    </body>
+</html>
