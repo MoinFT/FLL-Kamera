@@ -13,7 +13,7 @@ let rooms = new Map();
 
 app.get("/", (req, res) => {
     res.sendFile(
-        "[DEIN-PFAD-ZUM-SOURCE-ORDNER]/src/web/index.html"
+        "[PFAD-ZUM-SOURCE-ORDNER]/src/web/index.html"
     );
 });
 
@@ -21,7 +21,7 @@ app.get("/:file", (req, res) => {
     var file = req.params.file;
 
     res.sendFile(
-        "[DEIN-PFAD-ZUM-SOURCE-ORDNER]/src/web/" + file
+        "[PFAD-ZUM-SOURCE-ORDNER]/src/web/" + file
     );
 });
 
@@ -29,11 +29,19 @@ app.get("/img/:file", (req, res) => {
     var file = req.params.file;
 
     res.sendFile(
-        "[DEIN-PFAD-ZUM-SOURCE-ORDNER]/src/web/img/" + file
+        "[PFAD-ZUM-SOURCE-ORDNER]/src/web/img/" + file
     );
 });
 
-server.listen(3000, '[DEINE-SERVER-IP-ADRESSE]', () => {
+app.get("/fonts/:file", (req, res) => {
+    var file = req.params.file;
+
+    res.sendFile(
+        "[PFAD-ZUM-SOURCE-ORDNER]/src/web/fonts/" + file
+    );
+});
+
+server.listen(3000, '[SERVER-IP-ADRESSE]', () => {
     console.log("server running at http://localhost:3000");
 });
 

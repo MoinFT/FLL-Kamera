@@ -1,4 +1,4 @@
-var socket = io("http://[DEINE-SERVER-IP-ADRESSE]:3000", {
+var socket = io("http://[SERVER-IP-ADRESSE]:3000", {
     autoConnect: false,
     transports: ["websocket"],
 });
