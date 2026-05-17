@@ -36,6 +36,14 @@ app.get("/img/:file", (req, res) => {
     );
 });
 
+app.get("/fonts/:file", (req, res) => {
+    var file = req.params.file;
+
+    res.sendFile(
+        `${filePath}/src/web/fonts/${file}`
+    );
+});
+
 server.listen(3000, serverAddress, () => {
     console.log(`server running at http://${serverAddress}:3000`);
 });

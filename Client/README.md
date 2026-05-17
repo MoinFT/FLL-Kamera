@@ -11,6 +11,10 @@
 
 ## Vorbereitung
 
+### Raspberry Pi Image
+
+- Image: Raspberry Pi OS (Legacy, 64-Bit) Lite
+
 ### Alle Updates machen
 
 - `sudo apt-get update && sudo apt-get upgrade -y`
@@ -25,16 +29,17 @@
     auto eth0
     allow-hotplug eth0
     iface eth0 inet static
-            address 192.168.178.XXX
+            address 192.168.2.XXX
             netmask 255.255.255.0
-            gateway 192.168.178.1
+            gateway 192.168.2.1
 
-    dns-nameservers 192.168.178.1 8.8.8.8
+    dns-nameservers 192.168.2.1 8.8.8.8
     ```
 
 3. Die `XXX` gegen eine
     - `11` bei "Raspberry Pi 1" austauschen
     - `12` bei "Raspberry Pi 2" austauschen
+    - `13` bei "Raspberry Pi 3" austauschen (Ersatz)
 
 ### Node.JS installieren
 
