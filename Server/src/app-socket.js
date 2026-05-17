@@ -2,6 +2,9 @@ import express from "express";
 import { createServer } from "node:http";
 import { Server } from "socket.io";
 
+const serverAddress = "[DEINE-SERVER-IP-ADRESSE]";
+const filePath = "[DEIN-PFAD-ZUM-SOURCE-ORDNER]";
+
 const app = express();
 const server = new createServer(app);
 const io = new Server(server, {
@@ -13,7 +16,7 @@ let rooms = new Map();
 
 app.get("/", (req, res) => {
     res.sendFile(
-        "[DEIN-PFAD-ZUM-SOURCE-ORDNER]/src/web/index.html"
+        `${filePath}/src/web/index.html`
     );
 });
 
@@ -21,7 +24,7 @@ app.get("/:file", (req, res) => {
     var file = req.params.file;
 
     res.sendFile(
-        "[DEIN-PFAD-ZUM-SOURCE-ORDNER]/src/web/" + file
+        `${filePath}/src/web/${file}`
     );
 });
 
@@ -29,12 +32,12 @@ app.get("/img/:file", (req, res) => {
     var file = req.params.file;
 
     res.sendFile(
-        "[DEIN-PFAD-ZUM-SOURCE-ORDNER]/src/web/img/" + file
+        `${filePath}/src/web/img/${file}`
     );
 });
 
-server.listen(3000, '[DEINE-SERVER-IP-ADRESSE]', () => {
-    console.log("server running at http://localhost:3000");
+server.listen(3000, serverAddress, () => {
+    console.log(`server running at http://${serverAddress}:3000`);
 });
 
 io.on("connection", (socket) => {

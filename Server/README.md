@@ -33,31 +33,8 @@
 1. Den Pfad zum `/src/web/`-Ordner und die IP-Adresse in der Datei `src/app-socket.js` anpassen
 
     ```js
-    app.get("/", (req, res) => {
-        res.sendFile(
-            "[DEIN-PFAD-ZUM-SOURCE-ORDNER]/src/web/index.html"
-        );
-    });
-
-    app.get("/:file", (req, res) => {
-        var file = req.params.file;
-
-        res.sendFile(
-            "[DEIN-PFAD-ZUM-SOURCE-ORDNER]/src/web/" + file
-        );
-    });
-
-    app.get("/img/:file", (req, res) => {
-        var file = req.params.file;
-
-        res.sendFile(
-            "[DEIN-PFAD-ZUM-SOURCE-ORDNER]/server/src/web/img/" + file
-        );
-    });
-
-    server.listen(3000, '[DEINE-SERVER-IP-ADRESSE]', () => {
-        console.log("server running at http://localhost:3000");
-    });
+    const serverAddress = "[DEINE-SERVER-IP-ADRESSE]";
+    const filePath = "[DEIN-PFAD-ZUM-SOURCE-ORDNER]";
     ```
 
 2. Die IP-Adresse in der `/src/web/index.js` anpassen
